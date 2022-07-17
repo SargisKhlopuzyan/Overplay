@@ -1,0 +1,34 @@
+apply from: "$rootProject.projectDir/android-library.gradle"
+apply plugin: 'kotlin-kapt'
+
+android {
+    namespace 'com.sargis.khlopuzyan.overplay.presenter'
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //modules
+    implementation project(path: ':core:presenter')
+    implementation project(path: ':session:domain')
+
+    //koin
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-test:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-core-ext:$koin_version"
+
+    //androidx
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$androidx_lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-runtime:$androidx_lifecycle_version"
+}

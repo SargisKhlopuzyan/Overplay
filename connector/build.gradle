@@ -1,0 +1,27 @@
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+android {
+    namespace 'com.sargis.khlopuzyan.connector'
+}
+
+dependencies {
+
+    //modules
+
+    //core
+    implementation project(':core:data')
+    implementation project(':core:domain')
+    implementation project(':core:presenter')
+
+    //overplay
+    implementation project(':session:data')
+    implementation project(':session:domain')
+    implementation project(':session:presenter')
+
+    //koin
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-test:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-core-ext:$koin_version"
+
+}

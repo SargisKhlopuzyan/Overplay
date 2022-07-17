@@ -1,0 +1,13 @@
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+android {
+    namespace 'com.sargis.khlopuzyan.core.data'
+}
+
+dependencies {
+    //modules
+    implementation project(path: ':core:domain')
+
+    // Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:$datastore_preferences"
+}

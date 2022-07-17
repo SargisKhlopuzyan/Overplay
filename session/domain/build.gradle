@@ -1,0 +1,10 @@
+apply from: "$rootProject.projectDir/android-library.gradle"
+
+android {
+    namespace 'com.sargis.khlopuzyan.overplay.domain'
+}
+
+dependencies {
+    //modules
+    implementation project(path: ':core:domain')
+}
