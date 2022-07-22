@@ -15,10 +15,10 @@ class CalculateFontSizeForSensorEventUseCaseImpl(
         val degree = sessionRepo.calculateDeviceZAxisRotationDegree(sensorEventValues)
 
         return when {
-            degree > Constants.App.ROTATION_LEFT_ANGLE -> {
+            degree > Constants.App.ROTATION_RIGHT_ANGLE -> {
                 Constants.App.ROTATION_RIGHT_FONT_SIZE
             }
-            degree < Constants.App.ROTATION_RIGHT_ANGLE -> {
+            degree < Constants.App.ROTATION_LEFT_ANGLE -> {
                 Constants.App.ROTATION_LEFT_FONT_SIZE
             }
             else -> {

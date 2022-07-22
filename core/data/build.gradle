@@ -5,6 +5,7 @@ android {
 }
 
 dependencies {
+
     //modules
     implementation project(path: ':core:domain')
 

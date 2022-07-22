@@ -31,4 +31,15 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-runtime:$androidx_lifecycle_version"
+
+    //Local Unit Tests
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidx_espresso_core_version"
+
+    testImplementation "androidx.arch.core:core-testing:$androidx_core_testing_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_kotlin_version"
+    testImplementation "com.google.truth:truth:$truth_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "app.cash.turbine:turbine:$turbine_version"
 }

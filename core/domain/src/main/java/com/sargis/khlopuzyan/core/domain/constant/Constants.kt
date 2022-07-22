@@ -13,8 +13,8 @@ interface Constants {
     interface App {
         companion object {
             const val NEW_SESSION_DURATION = 10 // in minutes
-            const val ROTATION_LEFT_ANGLE = 30 // degree
-            const val ROTATION_RIGHT_ANGLE = -30 // degree
+            const val ROTATION_LEFT_ANGLE = -30 // degree
+            const val ROTATION_RIGHT_ANGLE = 30 // degree
 
             // font sizes
             const val ROTATION_LEFT_FONT_SIZE = 12f
